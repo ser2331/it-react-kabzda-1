@@ -1,0 +1,12 @@
+.item img{
+    width: 40px;
+    height: 40px;
+    border-radius: 60px;
+}
+.item-a {
+    grid-area: data;
+}
+.item{
+    display: flex;
+    flex-direction: row;
+}

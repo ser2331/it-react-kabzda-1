@@ -1,0 +1,35 @@
+.dialogs {
+    display: grid;
+    grid-template-columns: 2fr 10fr;
+}
+
+.dialogsItems {
+    padding: 10px;
+    color: darkgreen;
+}
+
+.dialog {
+
+
+}
+
+.dialogsItems .active {
+    text-decoration: gold;
+    color: gold;
+}
+
+.messages {
+    padding: 10px;
+
+}
+
+.message {
+
+    background: #39f;
+    color: #fff;
+    text-shadow: none;
+    content: "";
+    clear: both;
+    font-family: "Open Sans", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.8;
+}

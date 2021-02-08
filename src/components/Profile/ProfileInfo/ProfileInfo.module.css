@@ -1,0 +1,14 @@
+
+.fon {
+    width: 100%;
+    height: 200px;
+}
+
+.descriptionBlock {
+    width: 100px;
+    padding: 20px;
+}
+.descriptionBlock img{
+    border-radius: 75px;
+}
+
