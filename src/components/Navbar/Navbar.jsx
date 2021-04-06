@@ -1,18 +1,9 @@
 import React from "react";
 import s from "./Navbar.module.css";
 import {NavLink} from "react-router-dom";
-import FriendData from "../Friends/FriendData/FriendData";
+import FriendContainer from "../Friends/Friend/FriendContainer";
 
-
-const Navbar = (props) => {
-    let FriendElement = props.state.friend.map(f => (
-            <div className={s.item} key={f.id}>
-                <NavLink to="/friends" activeClassName={s.activeLink}>
-                    <FriendData surname={f.surname} ages={f.ages}/>
-                </NavLink>
-            </div>
-    ));
-
+const Navbar = () => {
     return <div>
         <nav className={s.nav}>
             <div className={s.item}>
@@ -20,6 +11,9 @@ const Navbar = (props) => {
             </div>
             <div className={s.item}>
                 <NavLink to="/dialogs" activeClassName={s.activeLink}>Massages</NavLink>
+            </div>
+            <div className={s.item + " " + s.friendsClass}>
+                <NavLink to="/users" activeClassName={s.activeLink}>Users</NavLink>
             </div>
             <div className={s.item}>
                 <NavLink to="/news" activeClassName={s.activeLink}>News</NavLink>
@@ -33,14 +27,16 @@ const Navbar = (props) => {
             <div className={s.item}>
                 <NavLink to="/settings" activeClassName={s.activeLink}>Settings</NavLink>
             </div>
-            <h3>Friends</h3>
-           <div className={s.frends}>
-                {FriendElement}
-           </div>
-        </nav>
-        <div>
+            <div className={s.item + " " + s.friendsClass}>
+                <NavLink to="/friends" activeClassName={s.activeLink}>Friends</NavLink>
+            </div>
 
-        </div>
+            <div className={s.item}>
+                <NavLink to="/friends" activeClassName={s.activeLink}>
+                    <FriendContainer/>
+                </NavLink>
+            </div>
+        </nav>
     </div>
 }
 

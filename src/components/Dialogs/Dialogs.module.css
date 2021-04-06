@@ -1,35 +1,29 @@
 .dialogs {
     display: grid;
     grid-template-columns: 2fr 10fr;
-}
-
-.dialogsItems {
-    padding: 10px;
-    color: darkgreen;
-}
-
-.dialog {
-
+    align-items: flex-start;
 
 }
-
-.dialogsItems .active {
-    text-decoration: gold;
-    color: gold;
-}
-
 .messages {
     padding: 10px;
-
 }
-
 .message {
-
+    height: 60px;
+    margin-top: 10px;
     background: #39f;
     color: #fff;
-    text-shadow: none;
-    content: "";
-    clear: both;
     font-family: "Open Sans", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    line-height: 1.8;
+    border-radius: 50px;
+    text-align: center;
+    line-height: 60px;
+    align-items: center;
+}
+.dialogs textarea {
+    width: 500px;
+    height: 100px;
+}
+.add {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
 }

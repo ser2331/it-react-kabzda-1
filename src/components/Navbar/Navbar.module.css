@@ -1,20 +1,32 @@
 .nav {
     grid-area: n;
     background-color: #ff8c00;
-    padding: 20px;
-  }
-.item a{
+    padding: 30px;
+    height: 100%;
+}
+
+.item a {
+
     color: #ffffff;
     text-decoration: none;
 }
-.item a.activeLink{
+
+.item a.activeLink {
     color: gold;
+
 }
-.item img{
+
+.item img {
     width: 60px;
     height: 60px;
 }
-.frends{
+
+.friends item {
     display: flex;
-    flex-flow: row nowrap;
+    flex-direction: row;
+}
+
+.friendsClass {
+    padding: 5px;
+
 }

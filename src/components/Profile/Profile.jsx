@@ -1,20 +1,20 @@
 import React from "react";
-import MyPosts from "./MyPosts/MyPosts";
 import s from "./Profile.module.css";
 import ProfileInfo from "./ProfileInfo/ProfileInfo";
+import MyPostsContainer from "./MyPosts/MyPostsContainer";
 
-const Profile = (props) => {
+
+const Profile = () => {
+    const backgroundUrl = "https://www.metoffice.gov.uk/binaries/content/gallery/metofficegovuk/hero-images/advice/maps-satellite-images/satellite-image-of-globe.jpg";
 
     return <div>
         <div>
-            <img className={s.fon}
-                 src="https://www.metoffice.gov.uk/binaries/content/gallery/metofficegovuk/hero-images/advice/maps-satellite-images/satellite-image-of-globe.jpg"/>
+            <img className={s.fon} src={backgroundUrl} alt=""/>
         </div>
         <div>
             <ProfileInfo/>
-            <MyPosts posts={props.state.posts}/>
+            <MyPostsContainer/>
         </div>
     </div>
-
 }
 export default Profile;

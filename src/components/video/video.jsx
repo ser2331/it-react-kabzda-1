@@ -1,6 +1,6 @@
 import React from "react";
-import s from "./video.module.css"
-const Video =(props)=>{
+
+const Video = () => {
     return <div>
         Video
     </div>
