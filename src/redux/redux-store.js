@@ -3,6 +3,7 @@ import profileReducer from "./profile-reducer";
 import dialogsReducer from "./dialogs-reducer";
 import friendReducer from "./friend-reducer";
 import usersReducer from "./users-reduser";
+import musicReducer from "./music-reducer";
 
 let reducers = combineReducers(
     {
@@ -10,6 +11,7 @@ let reducers = combineReducers(
         dialogsPage: dialogsReducer,
         friendPage: friendReducer,
         usersPage: usersReducer,
+        musicPage:musicReducer,
     }
 )
 
