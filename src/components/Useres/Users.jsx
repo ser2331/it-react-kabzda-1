@@ -14,23 +14,21 @@ class Users extends React.Component {
         })
     }
     render() {
-        let pageCount = this.props.pageSize / this.props.totalUsersCount
+        let pagesCount = Math.ceil(this.props.totalUsersCount / this.props.pageSize)
         let pages = []
-        for (let i = 1; 1 <= pageCount; i++) {
+        for (let i=1; pagesCount>=i; i++) {
             pages.push(i)
         }
         return <div>
             <div>
-                {
-                    pages.map(p=> {
-                        return <span className={ this.props.currentPage===p && s.selectedPage}>{p}</span>
+                {pages.map(p => {
+                   return <span className={this.props.currentPage === p && s.selectedPage} >{p}</span>
                 })}
-
             </div>
             {
                 this.props.users.map(u => <div key={u.id}>
                     <span>
-                    <div><img src={u.photos.small != null ? u.photos.small : UserPhoto} className={s.userPhoto}/></div>
+                        <div><img src={u.photos.small != null ? u.photos.small : UserPhoto} className={s.userPhoto} /></div>
                         <div>
                             {
                                 u.followed
@@ -39,22 +37,21 @@ class Users extends React.Component {
                             }
                         </div>
                     </span>
-                        <span>
                     <span>
-                        <div> {u.name} </div>
-                        <div> {u.status} </div>
-                    </span>
                         <span>
-                        <div> {"u.location.city"} </div>
-                        <div> {"u.location.country"} </div>
+                            <div> {u.name} </div>
+                            <div> {u.status} </div>
+                        </span>
+                        <span>
+                            <div> {"u.location.city"} </div>
+                            <div> {"u.location.country"} </div>
+                        </span>
                     </span>
-                    </span>
-                    </div>
+                </div>
                 )
             }
         </div>
 
     }
 }
-
 export default Users

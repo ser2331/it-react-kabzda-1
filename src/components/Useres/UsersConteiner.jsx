@@ -5,7 +5,7 @@ import {followAC, setUsersAC, unfollowAC} from "../../redux/users-reduser";
 let mapStateToProps = (state) => {
     return {
         users: state.usersPage.users,
-        pageSize:state.usersPage.pageSize,
+        pageSize: state.usersPage.pageSize,
         totalUsersCount: state.usersPage.totalUsersCount,
         currentPage: state.usersPage.currentPage
 
