@@ -1,6 +1,6 @@
 import React from "react"; import s from "./ProfileInfo.module.css";
 import Preloader from "../../common/preloader/Preloader"
-import asset from "../../../assets/img/asset.gif"
+import asset from "../../../assets/img/unnamed.jpg"
 import Contacts from "./contacts"
 const ProfileInfo = (props) => {
     if (!props.profile) {
@@ -10,9 +10,9 @@ const ProfileInfo = (props) => {
         <div> {props.profile.fullName} </div>
         <div>
             <div className={s.descriptionBlock}>
-                <img src={props.profile.photos.large != null ?
-                    props.profile.photos.large : asset}
+                <img src={props.profile.photos.large}
                     className={s.userPhoto} />
+            </div>
             </div>
             <Contacts profile={props.profile }/>
             <div>
@@ -25,6 +25,5 @@ const ProfileInfo = (props) => {
             <div>{props.profile.lookingForAJobDescription}</div>
             <div> {props.profile.aboutMe} </div>
         </div>
-    </div>
 }
 export default ProfileInfo;
