@@ -1,32 +1,34 @@
 import React from "react";
 import s from "./users.module.css";
 import UserPhoto from "../../assets/img/unnamed.jpg"
-import { NavLink } from "react-router-dom";
+import {NavLink} from "react-router-dom";
 
 
 let Users = (props) => {
 
     let pagesCount = Math.ceil(props.totalUsersCount / props.pageSize)
-        let pages = []
-        for (let i=1; pagesCount>=i; i++) {
-            pages.push(i)
-        }
+    let pages = []
+    for (let i = 1; pagesCount >= i; i++) {
+        pages.push(i)
+    }
 
 
     return <div>
         <div>
             {pages.map(p => {
                 return <span className={props.currentPage === p && s.selectedPage}
-                    onClick={(e) => { props.onPageChanget(p) }}> {p} </span>
+                             onClick={(e) => {
+                                 props.onPageChanget(p)
+                             }}> {p} </span>
             })}
         </div>
         {
             props.users.map(u => <div key={u.id}>
                 <span>
                     <div>
-                        <NavLink to={'/profile/'+u.id}>
-                        <img src={u.photos.small != null ? u.photos.small : UserPhoto} 
-                        className={s.userPhoto} />
+                        <NavLink to={'/profile/' + u.id}>
+                        <img src={u.photos.small != null ? u.photos.small : UserPhoto}
+                             className={s.userPhoto}/>
                         </NavLink> 
                         </div>
                     <div>
@@ -37,7 +39,7 @@ let Users = (props) => {
                         }
                     </div>
                 </span>
-                <span>
+                    <span>
                     <span>
                         <div> {u.name} </div>
                         <div> {u.status} </div>
@@ -47,7 +49,7 @@ let Users = (props) => {
                         <div> {"u.location.country"} </div>
                     </span>
                 </span>
-            </div>
+                </div>
             )
         }
     </div>

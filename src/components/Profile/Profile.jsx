@@ -14,7 +14,7 @@ const Profile = (props) => {
         <div>
             <ProfileInfo profile={props.profile}
                 unlook={props.unlook}
-                look={props.look} />
+                look={props.look}/>
             <MyPostsContainer />
 
         </div>
